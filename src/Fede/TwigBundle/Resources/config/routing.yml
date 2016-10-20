@@ -1,3 +1,9 @@
 fede_twig_homepage:
     path:     /
     defaults: { _controller: FedeTwigBundle:Default:index }
+fede_twig_si:
+    path:     /si
+    defaults: { _controller: FedeTwigBundle:Default:conditions }
+fede_twig_boucles:
+    path:     /boucles
+    defaults: { _controller: FedeTwigBundle:Default:boucles }

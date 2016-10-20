@@ -1,0 +1,88 @@
+{%extends "FedeRacineBundle::layout.html.twig"%}
+
+  {% block menu %}
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Test de Fede</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="{{ path("fede_racine_homepage") }}">Accueil</a></li>
+            <li><a href="{{ path("fede_twig_homepage")}}">Twig - Accueil</a></li>
+              <li><a href="{{ path("fede_twig_si")}}">Conditions</a></li>
+              <li class="active"><a href="{{ path("fede_twig_boucles")}}">Boucles</a></li>
+              <li><a href="#contact">CRUD</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+         
+{%endblock%}
+    {% block content %} 
+<br/><br/>
+      <div class="container theme-showcase" role="main">
+       <div class="jumbotron">
+        <h1>Boucles</h1>
+        {% for i in 1..21 %}
+        {# si c'est le premier tour #}
+        {% if loop.first %}
+            <hr/>
+            <h5>J'ai veçu un total de {{loop.length}} ans</h5>
+            <p>
+                
+        {%endif%}
+        {# loop.index nous renseigne le tour dans lequel on se trouve #}
+        Le an {{i}} de ma vie a été {{1994+i}}
+        <br/>
+        {# si on est au dernier tour #}
+        {% if loop.last %}
+        </p><hr/>
+        {# sinon (pas au dernier tour) on affiche le séparateur --- #}
+        {% else %} 
+        {%endif%}
+    {%endfor%}
+    {% for i in 10..1 %}
+        {% if loop.first %}
+            <hr/>
+            <h5>Compte à rebours: {{loop.length}}</h5>
+            <p>
+        {%endif%}
+        {# si impaire#}
+        {% if loop.index is odd %}
+            <em>{{i}}</em>
+            {%else%}
+                {{i}}
+        {%endif%}
+                {# si pas le dernier tour#}
+                {% if not loop.last %}
+                    ,     
+        {%endif%}
+        	
+    {%endfor%}
+    Décollage !
+    <hr/>
+       <h4>Tableau venant du contrôleur</h4>
+    <p>
+    {% for valeur in tableau%}
+        {{valeur}}
+    {%endfor%}
+    </p>
+    <p>
+        {% for clef,valeur in tableau%}
+        {{clef}} => {{valeur|trim}} 
+        {% if not loop.last %} | {%endif%}
+    {%endfor%}
+    </p>
+      </div>
+       
+    {% endblock%}
+ 
+ 

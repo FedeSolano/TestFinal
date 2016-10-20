@@ -16,6 +16,12 @@
    
    <body>
        {% block body %}
+        {% block menu %}
+              {% block sousmenu %}
+              {% endblock %}
+        {% endblock %}
+       {% block content %}  {% endblock %}
+       {% block footer %}{% endblock %}
        {% endblock %}
 
                 {% block javascripts %}
