@@ -1,3 +1,5 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+fede_racine:
+    resource: "@FedeRacineBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

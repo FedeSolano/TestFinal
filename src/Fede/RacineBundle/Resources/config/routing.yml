@@ -1,0 +1,3 @@
+fede_racine_homepage:
+    path:     /
+    defaults: { _controller: FedeRacineBundle:Default:index }
