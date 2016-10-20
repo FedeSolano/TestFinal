@@ -28,7 +28,7 @@ class ArticleController extends Controller
 
         $articles = $em->getRepository('FedeCRUDBundle:Article')->findAll();
 
-        return $this->render('article/index.html.twig', array(
+        return $this->render('FedeCRUDBundle:article:index.html.twig', array(
             'articles' => $articles,
         ));
     }
@@ -53,7 +53,7 @@ class ArticleController extends Controller
             return $this->redirectToRoute('CRUD_article_show', array('id' => $article->getId()));
         }
 
-        return $this->render('article/new.html.twig', array(
+        return $this->render('FedeCRUDBundle:article:new.html.twig', array(
             'article' => $article,
             'form' => $form->createView(),
         ));
@@ -69,7 +69,7 @@ class ArticleController extends Controller
     {
         $deleteForm = $this->createDeleteForm($article);
 
-        return $this->render('article/show.html.twig', array(
+        return $this->render('FedeCRUDBundle:article:show.html.twig', array(
             'article' => $article,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -95,7 +95,7 @@ class ArticleController extends Controller
             return $this->redirectToRoute('CRUD_article_edit', array('id' => $article->getId()));
         }
 
-        return $this->render('article/edit.html.twig', array(
+        return $this->render('FedeCRUDBundle:article:edit.html.twig', array(
             'article' => $article,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

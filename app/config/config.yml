@@ -140,3 +140,6 @@ assetic:
            inputs:
                - "%kernel.root_dir%/../vendor/twbs/bootstrap/fonts/glyphicons-halflings-regular.woff"
            output: "fonts/glyphicons-halflings-regular.woff"
+twig:
+    form:
+        resources: ['bootstrap_3_layout.html.twig']

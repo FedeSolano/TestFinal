@@ -1,6 +1,9 @@
-{% extends 'base.html.twig' %}
+{%extends "FedeRacineBundle::layout.html.twig"%}
 
-{% block body %}
+{% block content %}
+     <div class="container theme-showcase" role="main">
+       <div class="jumbotron">
+           <div class="form-group">
     <h1>Article creation</h1>
 
     {{ form_start(form) }}
@@ -13,4 +16,6 @@
             <a href="{{ path('CRUD_article_index') }}">Back to the list</a>
         </li>
     </ul>
+           </div>
+       </div>
 {% endblock %}

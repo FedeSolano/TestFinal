@@ -1,0 +1,37 @@
+{%extends "FedeRacineBundle::layout.html.twig"%}
+
+{% block content %}
+    <div class="container theme-showcase" role="main">
+       <div class="jumbotron">
+        
+     
+    <h1>Article list</h1>
+    <span style="font-size:18px; font-style:italic; "><a style="color:green;" href="{{ path('CRUD_article_new') }}">Create a new entry</a></span>
+    <table>
+        
+        {% for article in articles %}
+        <h3><a href="{{ path('CRUD_article_show', { 'id': article.id }) }}">{{ article.title }}</a></h3>
+         <span>Écrit par {{ article.utilisateurid }} le {{ article.date|date('Y-m-d H:i') }}</span>
+          <p>{{ article.text }}</p>
+            
+                    <ul>
+                        <li>
+                            <a href="{{ path('CRUD_article_show', { 'id': article.id }) }}">Voir</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('CRUD_article_edit', { 'id': article.id }) }}">Éditer</a>
+                        </li>
+                       
+                    </ul>
+                
+        {% endfor %}
+        
+
+    <ul>
+        <li>
+            <a href="{{ path('CRUD_article_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+             </div>
+        
+{% endblock %}
