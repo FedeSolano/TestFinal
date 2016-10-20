@@ -1,0 +1,3 @@
+fede_twig_homepage:
+    path:     /
+    defaults: { _controller: FedeTwigBundle:Default:index }

@@ -14,14 +14,15 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Accueil</a></li>
-            <li><a href="#about">Twig</a></li>
+            <li class="active"><a href="{{ path("fede_racine_homepage") }}">Accueil</a></li>
+            <li><a href="{{ path("fede_twig_homepage") }}">Twig</a></li>
             <li><a href="#contact">CRUD</a></li>
             
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+            {% block sousmenu%} {%endblock%}
     {%endblock%}
     {% block content %} 
         <div class="container theme-showcase" role="main">

@@ -1,4 +1,16 @@
-fede_racine:
+fede_twig_homepage:
+    resource: "@FedeTwigBundle/Resources/config/routing.yml"
+    prefix:   /FedeTwig
+
+fede_twig_conditions:
+    resource: "@FedeTwigBundle/Resources/config/routing.yml"
+    prefix:   /FedeTwig/conditions
+
+fede_twig_boucles:
+    resource: "@FedeTwigBundle/Resources/config/routing.yml"
+    prefix:   /FedeTwig/boucles
+
+fede_racine_homepage:
     resource: "@FedeRacineBundle/Resources/config/routing.yml"
     prefix:   /
 
