@@ -43,4 +43,74 @@ class Section
         $this->article = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set intitule
+     *
+     * @param string $intitule
+     * @return Section
+     */
+    public function setIntitule($intitule)
+    {
+        $this->intitule = $intitule;
+
+        return $this;
+    }
+
+    /**
+     * Get intitule
+     *
+     * @return string 
+     */
+    public function getIntitule()
+    {
+        return $this->intitule;
+    }
+    public function __toString()
+    {
+        return $this->intitule;
+    }
+
+    /**
+     * Add article
+     *
+     * @param \Fede\CRUDBundle\Entity\Article $article
+     * @return Section
+     */
+    public function addArticle(\Fede\CRUDBundle\Entity\Article $article)
+    {
+        $this->article[] = $article;
+
+        return $this;
+    }
+
+    /**
+     * Remove article
+     *
+     * @param \Fede\CRUDBundle\Entity\Article $article
+     */
+    public function removeArticle(\Fede\CRUDBundle\Entity\Article $article)
+    {
+        $this->article->removeElement($article);
+    }
+
+    /**
+     * Get article
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getArticle()
+    {
+        return $this->article;
+    }
 }

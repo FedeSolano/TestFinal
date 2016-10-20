@@ -1,1 +1,12 @@
-Hello World!
+{%extends "FedeRacineBundle::layout.html.twig"%}
+
+    {% block content %} 
+      <div class="container theme-showcase" role="main">
+       <div class="jumbotron">
+        <h1>Create, Update, Read & Delete</h1>
+        <p>Pour accéder aux articles de CRUD, <a href="{{ path("CRUD_article_index") }}">cliquer ici</a></p>
+      </div>
+       
+    {% endblock%}
+ 
+ 

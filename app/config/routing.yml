@@ -1,3 +1,7 @@
+fede_crud_article:
+    resource: "@FedeCRUDBundle/Controller/ArticleController.php"
+    type:     annotation
+
 fede_crud:
     resource: "@FedeCRUDBundle/Resources/config/routing.yml"
     prefix:   /CRUD
