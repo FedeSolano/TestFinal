@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Fede\RacineBundle\FedeRacineBundle(),
             new Fede\TwigBundle\FedeTwigBundle(),
+            new Fede\CRUDBundle\FedeCRUDBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

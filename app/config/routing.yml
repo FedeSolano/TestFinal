@@ -1,3 +1,7 @@
+fede_crud:
+    resource: "@FedeCRUDBundle/Resources/config/routing.yml"
+    prefix:   /CRUD
+
 fede_twig:
     resource: "@FedeTwigBundle/Resources/config/routing.yml"
     prefix:   /FedeTwig
